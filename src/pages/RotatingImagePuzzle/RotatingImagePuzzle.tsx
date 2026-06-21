@@ -141,7 +141,7 @@ const RotatingImagePuzzle = () => {
     const randomNumber = Math.floor(Math.random() * chessPlayers.length)
     const newSelectedChessPlayer = chessPlayers[randomNumber]
 
-    setImageName(`/img/players/${newSelectedChessPlayer.Key}.png`)
+    setImageName(`${import.meta.env.BASE_URL}img/players/${newSelectedChessPlayer.Key}.png`)
     setSelectedPlayer(newSelectedChessPlayer)
 
     const randomized = Array(gridSize * gridSize)
