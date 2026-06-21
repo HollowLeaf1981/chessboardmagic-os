@@ -512,7 +512,9 @@ function FischerRandomTrainer() {
 
   // Spin up the Stockfish worker once; tear it down on unmount.
   useEffect(() => {
-    stockfishWorker.current = new Worker(`/js/stockfish/stockfish-18-lite-single.js`)
+    stockfishWorker.current = new Worker(
+      `${import.meta.env.BASE_URL}js/stockfish/stockfish-18-lite-single.js`
+    )
     return () => {
       stockfishWorker.current?.terminate()
     }

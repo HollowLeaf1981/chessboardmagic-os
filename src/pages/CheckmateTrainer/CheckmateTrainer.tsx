@@ -73,7 +73,9 @@ function CheckmateTrainer() {
 
   // Load Stockfish as a Web Worker.
   useEffect(() => {
-    stockfishWorker.current = new Worker('/js/stockfish/stockfish-18-lite-single.js')
+    stockfishWorker.current = new Worker(
+      `${import.meta.env.BASE_URL}js/stockfish/stockfish-18-lite-single.js`
+    )
 
     return () => {
       stockfishWorker.current?.terminate()
