@@ -346,7 +346,7 @@ function GameViewer({
 
     const isWhite = colour === 'white'
     const resolvedImageKey = getPlayerImageKey(playerName, imageKey)
-    const imageSrc = resolvedImageKey ? `/img/players/${resolvedImageKey}.png` : undefined
+    const imageSrc = resolvedImageKey ? `img/players/${resolvedImageKey}.png` : undefined
     const imageFailed = resolvedImageKey ? failedPlayerImages[resolvedImageKey] : true
 
     return (
@@ -360,7 +360,7 @@ function GameViewer({
         <div className="mr-3 flex h-10 w-10 shrink-0 items-center justify-center bg-muted text-sm font-semibold text-foreground">
           {imageSrc && !imageFailed ? (
             <img
-              src={imageSrc}
+              src={`${import.meta.env.BASE_URL}${imageSrc}`}
               alt={playerName}
               className="h-10 w-10 object-cover"
               onError={() => {

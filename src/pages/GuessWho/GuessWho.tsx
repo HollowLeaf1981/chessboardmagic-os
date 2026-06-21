@@ -177,7 +177,7 @@ function GuessWho() {
           <div className="w-full">
             {imageName && (
               <img
-                src={imageName}
+                src={`${import.meta.env.BASE_URL}${imageName}`}
                 alt=""
                 className="w-full h-auto"
                 style={{ filter: portraitFilter }}

@@ -230,7 +230,7 @@ function Hangman() {
               (hangman0.png through hangman5.png). */}
             <div id="image" className="flex items-center my-6">
               <img
-                src={`/img/hangman/hangman${errorCount}.png`}
+                src={`${import.meta.env.BASE_URL}img/hangman/hangman${errorCount}.png`}
                 alt={`Hangman stage ${errorCount}`}
                 className="w-[120px] mr-2"
               />

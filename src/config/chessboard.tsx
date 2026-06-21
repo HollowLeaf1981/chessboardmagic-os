@@ -47,7 +47,7 @@ export function getPieceImageSrc(pieceCode: string): string {
   const color = pieceCode[0].toLowerCase()
   const piece = pieceCode[1].toUpperCase()
 
-  return `/img/chesspieces/${PIECE_SET}/${color}${piece}.png`
+  return `${import.meta.env.BASE_URL}/img/chesspieces/${PIECE_SET}/${color}${piece}.png`
 }
 
 /**
