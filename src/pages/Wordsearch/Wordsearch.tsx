@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 
 import { chessterms } from '@/data/chessterms'
 
-import './WordSearch.css'
+import './Wordsearch.css'
 
 // A single chessterm entry. Derived from the dataset so the type stays
 // accurate if columns change.
