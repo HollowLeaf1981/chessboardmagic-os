@@ -1,0 +1,17 @@
+/* ChessClock.css */
+
+/* Prevent click/focus visual changes on the player clock panels.
+   These rules can't be reproduced as inline Tailwind utilities — they
+   target browser-default tap and focus chrome that needs to be killed
+   for the panels to feel like dedicated tap targets rather than
+   generic clickable divs. */
+
+.clickable-box {
+  -webkit-tap-highlight-color: transparent; /* kills the blue mobile flash */
+  outline: none; /* kills focus ring */
+  user-select: none; /* kills text-select on drag */
+}
+
+.clickable-box:active {
+  background-color: inherit; /* kills the brief dim on tap */
+}

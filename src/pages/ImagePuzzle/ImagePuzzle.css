@@ -1,0 +1,40 @@
+.puzzle-container {
+  border: 1px solid #dddddd;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  z-index: 0;
+}
+
+.puzzle-container::before,
+.puzzle-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.puzzle-container::before {
+  background-image: linear-gradient(to right, #dddddd 1px, transparent 1px);
+  background-size: calc(100% / 5) 100%;
+}
+
+.puzzle-container::after {
+  background-image: linear-gradient(to bottom, #dddddd 1px, transparent 1px);
+  background-size: 100% calc(100% / 5);
+}
+
+.jigsaw-puzzle__piece {
+  border: 1px solid #dddddd;
+}
+
+.jigsaw-puzzle__piece.jigsaw-puzzle__piece--solved {
+  border: none;
+}

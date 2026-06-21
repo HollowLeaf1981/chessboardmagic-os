@@ -1,0 +1,111 @@
+/* Rest of your CSS code */
+
+.grid-table {
+  border-collapse: collapse; /* Collapse borders to avoid spacing */
+  width: 100%; /* Ensure the table takes full width of its container */
+}
+
+.grid-table td {
+  padding: 0; /* Remove any additional padding */
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #000;
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+/* WHen you are selecting a line */
+.selected {
+  background-color: #ad343e;
+}
+
+.cell {
+  user-select: none; /* Prevent text selection */
+}
+
+/* Found Colours */
+.found-0 {
+  background-color: #ffd1dc; /* Pastel Pink */
+  color: #000000 !important;
+}
+
+.found-1 {
+  background-color: #98fb98; /* Mint Green */
+  color: #000000 !important;
+}
+
+.found-2 {
+  background-color: #ffb6c1; /* Light Coral */
+  color: #000000 !important;
+}
+
+.found-3 {
+  background-color: #ffec8b; /* Light Goldenrod Yellow */
+  color: #000000 !important;
+}
+
+.found-4 {
+  background-color: #dda0dd; /* Plum */
+  color: #000000 !important;
+}
+
+.found-5 {
+  background-color: #f0e68c; /* Khaki */
+  color: #000000 !important;
+}
+
+.found-6 {
+  background-color: #add8e6; /* Light Blue */
+  color: #000000 !important;
+}
+
+.found-7 {
+  background-color: #87ceeb; /* Sky Blue */
+  color: #000000 !important;
+}
+
+.found-8 {
+  background-color: #ff1493; /* Deep Pink */
+  color: #000000 !important;
+}
+
+.found-9 {
+  background-color: #ff8c00; /* Dark Orange */
+  color: #000000 !important;
+}
+
+/* Change the selection color */
+.grid-table ::selection {
+  background-color: none;
+  color: black;
+}
+
+/* App.css */
+
+.strikethrough {
+  text-decoration: line-through !important;
+  color: #dddddd;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.board-container {
+  flex: 1;
+  margin-right: 20px; /* Add margin for spacing */
+}
+
+.word-list {
+  text-decoration: none; /* Remove underline for regular words */
+}
+
+.word-list del {
+  text-decoration: line-through; /* Apply strike-through for found words */
+}
+
+.list-item {
+  display: flex;
+  align-items: flex-start; /* Align text to the top */
+}
